@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>أُولَٰئِكَ الْمُقَرَّبُونَ — یہی لوگ اللہ کے مقرب بندے ہیں</title>
+
+    <meta name="description"
+        content="أُولَٰئِكَ الْمُقَرَّبُونَ — اللہ کے مقرب بندوں کے مقام، سعی، توفیق اور قربِ الٰہی پر مختصر اور جامع مضمون۔">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at top, #172b45 0%, #08111e 48%, #050b13 100%);
+            color: #e9edf3;
+            font-family: "Noto Nastaliq Urdu", serif;
+            line-height: 2.35;
+            font-size: 18px;
+        }
+
+        /* Main container */
+
+        .container {
+            width: min(900px, calc(100% - 28px));
+            margin: 30px auto 50px;
+            background: rgba(13, 25, 42, 0.96);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.55),
+                0 0 40px rgba(212, 175, 55, 0.05);
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 430px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 55px 25px;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 70%,
+                    rgba(255, 216, 105, 0.35) 0%,
+                    rgba(214, 165, 52, 0.15) 18%,
+                    rgba(10, 25, 42, 0.2) 42%,
+                    rgba(3, 9, 17, 0.95) 82%
+                ),
+                linear-gradient(
+                    180deg,
+                    #050b14 0%,
+                    #10233b 52%,
+                    #1b3044 100%
+                );
+        }
+
+        /* Soft heavenly light */
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255, 220, 120, 0.12);
+            filter: blur(70px);
+            bottom: -260px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Stars */
+
+        .hero::after {
+            content: "✦   ·     ✧       ·   ✦       ·      ✧     ·";
+            position: absolute;
+            top: 35px;
+            left: 0;
+            right: 0;
+            color: rgba(255, 235, 170, 0.45);
+            font-size: 22px;
+            letter-spacing: 8px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+        }
+
+        .hero-arabic {
+            font-family: "Amiri", serif;
+            font-size: clamp(2.4rem, 7vw, 4.7rem);
+            font-weight: 700;
+            color: #f4d77b;
+            line-height: 1.5;
+            text-shadow:
+                0 0 20px rgba(255, 215, 100, 0.25),
+                0 4px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-subtitle {
+            margin-top: 15px;
+            color: #ffffff;
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            line-height: 2;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-line {
+            width: 120px;
+            height: 2px;
+            background: #d4af37;
+            margin: 25px auto 0;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Article */
+
+        .article {
+            padding: 45px 55px 55px;
+        }
+
+        p {
+            margin: 0 0 28px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #f0cf67;
+            font-weight: 700;
+        }
+
+        /* Section headings */
+
+        h2 {
+            color: #e5c45c;
+            font-size: 1.55rem;
+            text-align: right;
+            margin: 42px 0 20px;
+            padding-right: 15px;
+            border-right: 4px solid #d4af37;
+            line-height: 2;
+        }
+
+        /* Quran / Hadith box */
+
+        .quote-box {
+            margin: 30px 0;
+            padding: 25px 22px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(30, 49, 76, 0.95),
+                    rgba(17, 31, 51, 0.95)
+                );
+            border: 1px solid rgba(212, 175, 55, 0.24);
+            border-right: 5px solid #d4af37;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .arabic {
+            direction: rtl;
+            text-align: center;
+            font-family: "Amiri", serif;
+            font-size: clamp(1.45rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #f1d274;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        .translation {
+            text-align: center;
+            color: #d8dee8;
+            font-size: 1rem;
+            line-height: 2.2;
+            margin-bottom: 10px;
+        }
+
+        .reference {
+            text-align: center;
+            color: #8f9bad;
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 0.9rem;
+        }
+
+        /* Important message */
+
+        .highlight {
+            margin: 38px 0;
+            padding: 28px 20px;
+            text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(75, 57, 18, 0.55),
+                    rgba(35, 35, 28, 0.65)
+                );
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 16px;
+            color: #f5d878;
+            font-size: clamp(1.15rem, 4vw, 1.45rem);
+            line-height: 2.5;
+            box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.03);
+        }
+
+        /* Small Arabic phrase */
+
+        .small-arabic {
+            font-family: "Amiri", serif;
+            direction: rtl;
+            text-align: center;
+            color: #f1d274;
+            font-size: 1.65rem;
+            margin: 25px 0 35px;
+        }
+
+        /* Ending */
+
+        .ending {
+            margin-top: 45px;
+            padding: 30px 25px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            color: #dfe5ed;
+        }
+
+        .dua {
+            color: #f0d36f;
+            font-size: 1.1rem;
+            line-height: 2.5;
+        }
+
+        .author {
+            margin-top: 35px;
+            color: #d4af37;
+            font-size: 1rem;
+            line-height: 2.2;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6f7c8e;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+
+            body {
+                font-size: 17px;
+                line-height: 2.25;
+            }
+
+            .container {
+                width: calc(100% - 16px);
+                margin: 8px auto 25px;
+                border-radius: 16px;
+            }
+
+            .hero {
+                min-height: 360px;
+                padding: 45px 18px;
+            }
+
+            .hero::after {
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+
+            .article {
+                padding: 28px 19px 35px;
+            }
+
+            p {
+                text-align: right;
+                margin-bottom: 23px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 34px;
+            }
+
+            .quote-box {
+                padding: 20px 14px;
+            }
+
+            .arabic {
+                font-size: 1.35rem;
+            }
+
+            .translation {
+                font-size: 0.95rem;
+            }
+
+            .highlight {
+                padding: 22px 12px;
+            }
+
+            .ending {
+                padding: 25px 12px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================
+             HERO / GRAPHIC
+             ========================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-arabic">
+                    أُولَٰئِكَ الْمُقَرَّبُونَ
+                </div>
+
+                <div class="hero-subtitle">
+                    یہی لوگ اللہ کے مقرب بندے ہیں
+                </div>
+
+                <div class="hero-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ARTICLE
+             ========================= -->
+
+        <article class="article">
+
+            <p>
+                اللہ تعالیٰ نے قیامت کے دن انسانوں کے تین گروہوں کا ذکر فرمایا:
+            </p>
+
+
+            <!-- Quran -->
+
+            <div class="quote-box">
+
+                <div class="arabic">
+                    وَالسَّابِقُونَ السَّابِقُونَ ۝
+                    أُولَٰئِكَ الْمُقَرَّبُونَ ۝
+                    فِي جَنَّاتِ النَّعِيمِ
+                </div>
+
+                <div class="translation">
+                    "اور سبقت لے جانے والے تو سبقت لے جانے والے ہی ہیں۔
+                    یہی لوگ مقرب ہوں گے، نعمتوں بھری جنتوں میں۔"
+                </div>
+
+                <div class="reference">
+                    سورۃ الواقعہ: 10–12
+                </div>
+
+            </div>
+
+
+            <p>
+                یہاں <strong>السَّابِقُونَ</strong> کی سب سے بڑی پہچان یہ بیان ہوئی
+                کہ وہ <strong>الْمُقَرَّبُونَ</strong> ہیں؛ یعنی اللہ تعالیٰ کے
+                مقرب بندے۔
+            </p>
+
+
+            <h2>
+                اللہ کے قرب کا راستہ
+            </h2>
+
+
+            <p>
+                اللہ کا قرب محض خواہش سے حاصل نہیں ہوتا۔ حدیثِ قدسی میں
+                اللہ تعالیٰ فرماتا ہے:
+            </p>
+
+
+            <!-- Hadith -->
+
+            <div class="quote-box">
+
+                <div class="arabic">
+                    وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ
+                    أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ،
+                    وَمَا يَزَالُ عَبْدِي يَتَقَرَّبُ إِلَيَّ
+                    بِالنَّوَافِلِ حَتَّى أُحِبَّهُ
+                </div>
+
+                <div class="translation">
+                    "میرا بندہ جن چیزوں کے ذریعے میرے قریب ہوتا ہے،
+                    ان میں مجھے سب سے زیادہ محبوب وہ چیزیں ہیں جو میں
+                    نے اس پر فرض کی ہیں، اور میرا بندہ نوافل کے ذریعے
+                    مسلسل میرے قریب ہوتا رہتا ہے، یہاں تک کہ میں اس
+                    سے محبت کرنے لگتا ہوں۔"
+                </div>
+
+                <div class="reference">
+                    صحیح البخاری: 6502
+                </div>
+
+            </div>
+
+
+            <h2>
+                توفیق اللہ کی، سعی بندے کی
+            </h2>
+
+
+            <p>
+                نیکی کی توفیق اللہ تعالیٰ کی عطا ہے۔ حضرت شعیب علیہ السلام
+                نے فرمایا:
+            </p>
+
+
+            <div class="quote-box">
+
+                <div class="arabic">
+                    وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ
+                </div>
+
+                <div class="translation">
+                    "اور میری توفیق تو اللہ ہی کی مدد سے ہے۔"
+                </div>
+
+                <div class="reference">
+                    سورۃ ہود: 88
+                </div>
+
+            </div>
+
+
+            <p>
+                لیکن اللہ کی توفیق پر ایمان کا مطلب یہ نہیں کہ بندہ کوشش
+                چھوڑ دے۔ قرآن فرماتا ہے:
+            </p>
+
+
+            <div class="quote-box">
+
+                <div class="arabic">
+                    وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ
+                </div>
+
+                <div class="translation">
+                    "اور یہ کہ انسان کے لیے وہی ہے جس کی اس نے کوشش کی۔"
+                </div>
+
+                <div class="reference">
+                    سورۃ النجم: 39
+                </div>
+
+            </div>
+
+
+            <p>
+                پس مومن اپنی پوری سعی کرتا ہے، نیکی کے لیے قدم اٹھاتا ہے،
+                فرائض ادا کرتا ہے، نوافل کے ذریعے قرب تلاش کرتا ہے اور
+                گناہوں سے بچنے کی کوشش کرتا ہے؛ پھر نتیجہ اللہ تعالیٰ
+                کے سپرد کر دیتا ہے۔
+            </p>
+
+
+            <!-- Highlight -->
+
+            <div class="highlight">
+                سعی بندے کی، توفیق اللہ کی؛
+                <br>
+                کوشش بندے کی، نتیجہ اللہ کے ہاتھ میں۔
+            </div>
+
+
+            <p>
+                اسی لیے نیکی کی توفیق ملنے پر وہ اپنے عمل پر فخر نہیں کرتا،
+                بلکہ اپنے رب کا شکر ادا کرتا ہے اور کہتا ہے:
+            </p>
+
+
+            <div class="small-arabic">
+                لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+            </div>
+
+
+            <p>
+                اگر اللہ تعالیٰ اپنے فضل سے اسے قرب کا مقام عطا فرمائے
+                تو اس کا انجام وہی ہوگا جس کا وعدہ قرآن نے فرمایا:
+            </p>
+
+
+            <div class="quote-box">
+
+                <div class="arabic">
+                    أُولَٰئِكَ الْمُقَرَّبُونَ ۝
+                    فِي جَنَّاتِ النَّعِيمِ
+                </div>
+
+                <div class="translation">
+                    "یہی لوگ مقرب ہوں گے، نعمتوں بھری جنتوں میں۔"
+                </div>
+
+                <div class="reference">
+                    سورۃ الواقعہ: 11–12
+                </div>
+
+            </div>
+
+
+            <p>
+                یہی اصل کامیابی ہے کہ دنیا ہمیں چاہے یا نہ چاہے،
+                <strong>اللہ تعالیٰ ہمیں اپنا مقرب بندہ بنا لے۔</strong>
+            </p>
+
+
+            <!-- Dua -->
+
+            <div class="ending">
+
+                <div class="dua">
+                    اے اللہ! ہمیں اپنی رضا کے لیے سچی سعی کرنے کی توفیق
+                    عطا فرما، ہماری کوشش قبول فرما، اور اپنے فضل و رحمت
+                    سے ہمیں اپنے مقرب بندوں میں شامل فرما۔
+                    <br>
+                    آمین۔
+                </div>
+
+                <div class="author">
+                    طالبِ دعا
+                    <br>
+                    <strong>ابو ماثور</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <footer>
+            أُولَٰئِكَ الْمُقَرَّبُونَ
+        </footer>
+
+    </main>
+
+</body>
+</html>
